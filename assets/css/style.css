@@ -467,3 +467,47 @@ img.entries-art { width: 100%; height: auto; margin-top: 48px; }
 .rise.is-up .r2 { transition-delay: .15s; } .rise.is-up .r3 { transition-delay: .3s; } .rise.is-up .r4 { transition-delay: .45s; }
 @media (prefers-reduced-motion: reduce) { .rise-step { animation: none; } .js .rise:not(.is-up) .rise-step { transform: none; } }
 .block.dark .rise-step h3 { color: inherit; }
+
+/* ---------- motion system ---------- */
+/* scroll reveal (only when JS runs; content is visible otherwise) */
+.js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .9s cubic-bezier(.2, .7, .2, 1); transition-delay: var(--d, 0s); }
+.js .reveal.in { opacity: 1; transform: none; }
+
+/* hero entrance */
+.js .hero h1, .js .hero-text p, .js .hero-actions, .js .hero-art img.art, .js .hero-cards .hcard { animation: enter-up 1s cubic-bezier(.2, .7, .2, 1) both; }
+.js .hero-text p { animation-delay: .15s; }
+.js .hero-actions { animation-delay: .3s; }
+.js .hero-art img.art { animation: enter-rise 1.4s cubic-bezier(.2, .7, .2, 1) .35s both; }
+.js .hero-cards .hcard:nth-child(1) { animation-delay: .7s; }
+.js .hero-cards .hcard:nth-child(2) { animation-delay: .8s; }
+.js .hero-cards .hcard:nth-child(3) { animation-delay: .9s; }
+.js .page-head h1 { animation: enter-up .9s cubic-bezier(.2, .7, .2, 1) both; }
+.js .contact-panel > * { animation: enter-up .9s cubic-bezier(.2, .7, .2, 1) both; }
+.js .contact-panel > *:nth-child(2) { animation-delay: .12s; }
+.js .contact-panel > *:nth-child(3) { animation-delay: .24s; }
+@keyframes enter-up { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+@keyframes enter-rise { from { opacity: 0; transform: translateY(80px); } to { opacity: 1; transform: none; } }
+
+/* hover and focus transitions */
+.btn { transition: background .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.hcard { transition: background .25s ease, transform .35s cubic-bezier(.2, .7, .2, 1); }
+.hcard:hover { transform: translateY(-6px); }
+.entry-link, .text-link { transition: border-width .2s ease, color .2s ease; }
+.nav a { position: relative; border-bottom-color: transparent !important; }
+.nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1.5px; background: var(--navy); transform: scaleX(0); transform-origin: left; transition: transform .3s ease; }
+.nav a:hover::after, .nav a[aria-current="page"]::after { transform: scaleX(1); }
+img.init-art, img.outcome-art, img.value-img { transition: transform .4s cubic-bezier(.2, .7, .2, 1); }
+.initiatives li:hover img.init-art, .cols > div:hover img.outcome-art, .values > div:hover img.value-img { transform: translateY(-4px) scale(1.04); }
+.partners li { transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
+.partners li:hover { transform: translateY(-6px); }
+.feature figure img, .project-art img, .contact-art img, .art-band img { transition: transform .8s cubic-bezier(.2, .7, .2, 1); }
+.feature figure:hover img, .project-art:hover img, .contact-art:hover img { transform: scale(1.02); }
+.foot a { transition: color .2s ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .js .hero h1, .js .hero-text p, .js .hero-actions, .js .hero-art img.art, .js .hero-cards .hcard, .js .page-head h1, .js .contact-panel > * { animation: none; }
+  .btn:hover, .hcard:hover, .partners li:hover { transform: none; }
+}
