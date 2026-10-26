@@ -433,3 +433,12 @@ img.entries-art { width: 100%; height: auto; margin-top: 48px; }
   .feature-split { grid-template-columns: 1fr; }
   .stats { grid-template-columns: 1fr 1fr; }
 }
+
+/* saffron card bleeds to the right edge of the page */
+.hero-cards { overflow-x: clip; }
+.hcard-accent { position: relative; }
+.hcard-accent::after { content: ""; position: absolute; top: 0; bottom: 0; left: 100%; width: 100vw; background: var(--saffron); }
+/* how we work: steps only */
+.verbs h3 { font-size: clamp(26px, 2.6vw, 34px); margin: 0; }
+.verbs > div { padding-top: 8px; }
+.stats span { font-size: 17px; font-weight: 500; }
