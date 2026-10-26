@@ -295,3 +295,7 @@ img.art { display: block; width: 100%; height: auto; }
 .vicon .t { fill: #e3eee8; }
 .vicon .s { fill: #12392d; }
 .vicon .o { fill: #12392d; fill-opacity: .28; stroke: none; }
+
+.cols3 > div { display: flex; flex-direction: column; }
+img.outcome-art { width: auto; max-width: 100%; height: 200px; object-fit: contain; object-position: left bottom; margin-bottom: 24px; flex: none; }
+.cols3 > div > h3 { margin-top: 0; }
