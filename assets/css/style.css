@@ -309,7 +309,8 @@ img.value-img { display: block; width: auto; height: 84px; margin-bottom: 18px; 
 .facts dd { margin: 0; color: var(--ink-soft); }
 .project-art img.art { max-width: 290px; margin-left: auto; }
 .initiatives { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 40px; }
-.initiatives li { font: 600 22px/1.25 var(--sans); letter-spacing: -.01em; color: var(--navy); }
+.initiatives li h3 { margin-bottom: 8px; }
+.initiatives li p { margin: 0; color: var(--ink-soft); font-size: 16.5px; }
 @media (max-width: 900px) {
   .project-grid { grid-template-columns: 1fr; }
   .project-art { order: -1; }
