@@ -437,9 +437,16 @@ img.entries-art { width: 100%; height: auto; margin-top: 48px; }
 /* saffron card bleeds to the right edge of the page */
 .hero-cards { overflow-x: clip; }
 .hcard-accent { position: relative; }
-.hcard-accent::after { content: ""; position: absolute; top: 56px; bottom: 0; left: calc(100% - 1px); width: 100vw; background: var(--saffron); }
+.hcard-accent::after { content: ""; position: absolute; top: 56px; bottom: 0; left: calc(100% - 1px); width: calc(var(--gut) + 1px); background: var(--saffron); }
 @media (max-width: 900px) { .hcard-accent::after { display: none; } }
 /* how we work: steps only */
 .verbs h3 { font-size: clamp(26px, 2.6vw, 34px); margin: 0; }
 .verbs > div { padding-top: 8px; }
 .stats span { font-size: 17px; font-weight: 500; }
+
+/* big stats */
+.stats { gap: 24px 40px; align-items: start; }
+.stats strong { font: 700 clamp(104px, 13vw, 180px)/.85 var(--sans); letter-spacing: -.06em; margin-bottom: 18px; }
+.stats span { font: 600 18px/1.35 var(--sans); color: #13261f; max-width: 16ch; }
+.stats-band h2 { margin-bottom: 48px; }
+@media (max-width: 900px) { .stats strong { font-size: clamp(88px, 24vw, 140px); } }
