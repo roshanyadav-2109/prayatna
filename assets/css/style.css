@@ -11,6 +11,7 @@
   --navy-deep: #0b2a20;
   --teal: #2b7a5c;
   --ochre: #b4741a;
+  --saffron: #f2b544;
   --rule: #cfc8b9;
   --rule-dark: #2f5446;
 
@@ -400,3 +401,35 @@ img.init-art { width: auto; height: 96px; margin-bottom: 20px; }
 
 img.entries-art { width: 100%; height: auto; margin-top: 48px; }
 .entries-art + .entries { margin-top: 32px; }
+
+/* candid-style homepage pieces */
+.hero-cards { position: relative; margin-top: -56px; z-index: 2; }
+.cards3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; box-shadow: 0 18px 40px rgba(11, 42, 32, .12); }
+.hcard { display: block; text-decoration: none; color: var(--ink); background: #fff; padding: 32px 32px 30px; transition: background .2s; }
+.hcard + .hcard { box-shadow: inset 1px 0 0 #e6ebe8; }
+.hcard:hover { background: #f6f9f7; color: var(--ink); }
+.hcard h3 { font-size: 22px; margin-bottom: 10px; }
+.hcard p { color: var(--ink-soft); font-size: 16px; margin-bottom: 18px; }
+.hcard-accent { background: var(--saffron); box-shadow: none !important; }
+.hcard-accent:hover { background: #f5c25f; }
+.hcard-accent h3, .hcard-accent .entry-link { color: #13261f; border-color: #13261f; }
+.hcard-accent p { color: #2b2a22; }
+.feature-split { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); }
+.feature-split h2 { margin-bottom: 16px; }
+.dash { list-style: none; padding: 0; margin: 24px 0 32px; display: grid; gap: 12px; }
+.dash li { position: relative; padding-left: 30px; color: var(--ink-soft); }
+.dash li::before { content: ""; position: absolute; left: 0; top: .78em; width: 16px; height: 2px; background: var(--saffron); }
+.btn-saffron { background: var(--saffron); color: #13261f; }
+.btn-saffron:hover { background: #f5c25f; color: #13261f; }
+.stats-band { background: var(--saffron); color: #13261f; padding: clamp(56px, 7vw, 96px) 0; }
+.stats-band h2 { color: #13261f; margin-bottom: 40px; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+.stats strong { display: block; font: 600 clamp(56px, 7vw, 92px)/1 var(--sans); letter-spacing: -.04em; color: #13261f; margin-bottom: 14px; }
+.stats span { display: block; font-size: 16px; color: #2b2a22; max-width: 24ch; }
+@media (max-width: 900px) {
+  .hero-cards { margin-top: -40px; }
+  .cards3 { grid-template-columns: 1fr; }
+  .hcard + .hcard { box-shadow: inset 0 1px 0 #e6ebe8; }
+  .feature-split { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr 1fr; }
+}
