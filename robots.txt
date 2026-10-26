@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://roshanyadav-2109.github.io/prayatna/sitemap.xml
