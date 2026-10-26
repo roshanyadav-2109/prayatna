@@ -560,3 +560,22 @@ img.init-art, img.outcome-art, img.value-img { transition: transform .4s cubic-b
 .notfound p:not(.notfound-code) { color: var(--ink-soft); font-size: 19px; margin-bottom: 32px; }
 .btn-outline { background: transparent; color: var(--navy); box-shadow: inset 0 0 0 1.5px var(--navy); }
 .btn-outline:hover { background: var(--navy); color: #fff; }
+
+/* ---------- tablet (601–900px): use two columns where there is room ---------- */
+@media (min-width: 601px) and (max-width: 900px) {
+  .states { grid-template-columns: 1fr 1fr; gap: 32px; align-items: end; }
+  .cols4, .cols3, .values, .audiences, .areas, .facts { grid-template-columns: 1fr 1fr; gap: 40px 32px; }
+  .areas > div, .areas > div:nth-child(n) { grid-column: auto; }
+  .initiatives { grid-template-columns: 1fr 1fr; }
+  .verticals-text { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .cols-2 { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .hcard p { display: block; font-size: 14.5px; }
+  .hcard h3 { font-size: 17px; }
+  .feature .f-circle, .feature .f-arch { max-width: 380px; }
+  .project-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+  .project-art { order: 0; }
+  .project-art img.art { max-width: 260px; margin-left: auto; }
+  .partners { grid-template-columns: repeat(3, 1fr); }
+  .foot-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
+  .foot-grid > :first-child { grid-column: auto; }
+}
