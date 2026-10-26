@@ -272,3 +272,10 @@ img.art { display: block; width: 100%; height: auto; }
 .feature img.art-arch { aspect-ratio: auto; object-fit: contain; }
 
 .state-map { display: block; width: 100%; height: auto; overflow: visible; }
+
+/* cut-out figures standing on the state maps */
+.state-stage { position: relative; }
+.state-figure { position: absolute; pointer-events: none; filter: drop-shadow(0 10px 8px rgba(31, 35, 40, .22)); }
+.states .state-figure { aspect-ratio: auto; object-fit: contain; height: auto; }
+.states .state-figure.rhino { width: 58%; left: -7%; bottom: -3%; }
+.state-stage { padding-bottom: 44px; }
