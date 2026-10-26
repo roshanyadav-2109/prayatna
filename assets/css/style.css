@@ -291,9 +291,9 @@ img.art { display: block; width: 100%; height: auto; }
 @media (prefers-reduced-motion: reduce) { .state-fill, .state-outline, .states .state-figure { transition: none !important; } }
 
 
-.cols3 > div { display: flex; flex-direction: column; }
+.cols3 > div, .cols4 > div { display: flex; flex-direction: column; }
 img.outcome-art { width: auto; max-width: 100%; height: 110px; object-fit: contain; object-position: left bottom; margin-bottom: 24px; flex: none; }
-.cols3 > div > h3 { margin-top: 0; }
+.cols3 > div > h3, .cols4 > div > h3 { margin-top: 0; }
 
 /* value icons (supplied artwork) */
 img.value-img { display: block; width: auto; height: 84px; margin-bottom: 18px; }
