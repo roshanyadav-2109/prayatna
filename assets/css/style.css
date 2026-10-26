@@ -277,5 +277,7 @@ img.art { display: block; width: 100%; height: auto; }
 .state-stage { position: relative; }
 .state-figure { position: absolute; pointer-events: none; filter: drop-shadow(0 10px 8px rgba(31, 35, 40, .22)); }
 .states .state-figure { aspect-ratio: auto; object-fit: contain; height: auto; }
-.states .state-figure.rhino { width: 58%; left: -7%; bottom: -3%; }
+.states .state-figure.rhino { width: 62%; left: -20%; bottom: -2%; z-index: 1; }
 .state-stage { padding-bottom: 44px; }
+
+.state-stage .state-line { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: 2; pointer-events: none; }
