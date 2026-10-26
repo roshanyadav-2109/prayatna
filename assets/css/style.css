@@ -520,3 +520,15 @@ img.init-art, img.outcome-art, img.value-img { transition: transform .4s cubic-b
   .rise-step { padding: 0 6px 14px; }
   .rise-step h3 { font-size: 13px; letter-spacing: 0; text-align: center; }
 }
+
+/* hero cards: one swipeable row on small screens */
+@media (max-width: 900px) {
+  .hero-cards { margin-top: -36px; overflow: visible; }
+  .cards3 { display: flex; grid-template-columns: none; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; box-shadow: none; padding: 0 var(--gut) 28px; scroll-padding-left: var(--gut); max-width: none; }
+  .cards3::-webkit-scrollbar { display: none; }
+  .hcard { flex: 0 0 78%; max-width: 340px; scroll-snap-align: start; padding: 24px 22px; box-shadow: 0 10px 28px rgba(11, 42, 32, .14) !important; }
+  .hcard + .hcard { box-shadow: 0 10px 28px rgba(11, 42, 32, .14) !important; }
+  .hcard h3 { font-size: 19px; }
+  .hcard p { font-size: 15px; margin-bottom: 14px; }
+}
