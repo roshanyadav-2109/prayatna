@@ -116,8 +116,7 @@ figure { margin: 0; }
 .sector-line { font: 500 16px/1.5 var(--sans); color: var(--ink); margin: 24px 0 28px; padding-top: 14px; }
 
 /* where we work */
-.states { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(24px, 4vw, 56px); align-items: start; }
-.states figure:nth-child(2) { margin-top: 88px; }
+.states { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 88px); align-items: end; }
 .states img { width: 100%; object-fit: cover; }
 .states figure:first-child img { aspect-ratio: 4 / 3; }
 .states figure:nth-child(2) img { aspect-ratio: 4 / 5; }
@@ -271,3 +270,5 @@ img.art { display: block; width: 100%; height: auto; }
 .feature img.art-arch { max-width: 420px; margin-left: auto; margin-right: auto; }
 .page-head .split figure img.art { aspect-ratio: auto; object-fit: contain; }
 .feature img.art-arch { aspect-ratio: auto; object-fit: contain; }
+
+.state-map { display: block; width: 100%; height: auto; overflow: visible; }
