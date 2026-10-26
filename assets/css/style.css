@@ -511,3 +511,12 @@ img.init-art, img.outcome-art, img.value-img { transition: transform .4s cubic-b
   .js .hero h1, .js .hero-text p, .js .hero-actions, .js .hero-art img.art, .js .hero-cards .hcard, .js .page-head h1, .js .contact-panel > * { animation: none; }
   .btn:hover, .hcard:hover, .partners li:hover { transform: none; }
 }
+.foot-credit { font-size: 12px; color: #8fa89c; margin: 14px 0 0; max-width: none; }
+
+/* rising arches on small screens */
+.rise { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 600px) {
+  .rise { height: 260px; gap: 8px; margin-top: 32px; }
+  .rise-step { padding: 0 6px 14px; }
+  .rise-step h3 { font-size: 13px; letter-spacing: 0; text-align: center; }
+}
