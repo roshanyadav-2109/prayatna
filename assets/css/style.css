@@ -262,3 +262,12 @@ figure { margin: 0; }
 @media (max-width: 560px) { .partners { grid-template-columns: repeat(2, 1fr); } .partners img { height: 96px; } }
 .partners-block h2 { margin-bottom: 16px; }
 .partners-block .lede { font-size: 20px; color: var(--ink-soft); }
+
+/* illustrations */
+img.art { display: block; width: 100%; height: auto; }
+.panorama img.art { margin-top: 8px; }
+.art-band { padding: 0; }
+.art-band.tuck { margin-top: -48px; }
+.feature img.art-arch { max-width: 420px; margin-left: auto; margin-right: auto; }
+.page-head .split figure img.art { aspect-ratio: auto; object-fit: contain; }
+.feature img.art-arch { aspect-ratio: auto; object-fit: contain; }
