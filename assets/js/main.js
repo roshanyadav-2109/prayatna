@@ -32,3 +32,14 @@
   }, { threshold: 0.5 });
   stages.forEach(function (s) { io.observe(s); });
 })();
+
+// How we work: arches rise when the section scrolls into view.
+(function () {
+  var rise = document.querySelector('.rise');
+  if (!rise) return;
+  if (!('IntersectionObserver' in window)) { rise.classList.add('is-up'); return; }
+  var io = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) { rise.classList.add('is-up'); io.disconnect(); }
+  }, { threshold: 0.35 });
+  io.observe(rise);
+})();

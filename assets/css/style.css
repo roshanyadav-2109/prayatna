@@ -450,3 +450,20 @@ img.entries-art { width: 100%; height: auto; margin-top: 48px; }
 .stats span { font: 600 18px/1.35 var(--sans); color: #13261f; max-width: 16ch; }
 .stats-band h2 { margin-bottom: 48px; }
 @media (max-width: 900px) { .stats strong { font-size: clamp(88px, 24vw, 140px); } }
+
+
+/* how we work: rising arches */
+.rise { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 2vw, 24px); align-items: end; height: clamp(300px, 34vw, 440px); margin-top: 48px; }
+.rise-step { position: relative; border-radius: 999px 999px 0 0; background: #1d4a3b; color: #fff; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 clamp(16px, 2vw, 32px) clamp(20px, 2.4vw, 32px); transform-origin: bottom; animation: rise-glow 8s ease-in-out infinite; }
+.rise-step h3 { color: inherit; font-size: clamp(20px, 2.4vw, 34px); margin: 0; letter-spacing: -.02em; }
+.rise-step span { font: 600 clamp(13px, 1.1vw, 15px)/1 var(--sans); letter-spacing: .08em; opacity: .7; margin-bottom: 10px; }
+.r1 { height: 46%; animation-delay: 0s; }
+.r2 { height: 64%; animation-delay: 2s; }
+.r3 { height: 82%; animation-delay: 4s; }
+.r4 { height: 100%; animation-delay: 6s; }
+@keyframes rise-glow { 0%, 30%, 100% { background: #1d4a3b; color: #fff; } 6%, 22% { background: var(--saffron); color: #13261f; } }
+.js .rise:not(.is-up) .rise-step { transform: scaleY(0); }
+.rise.is-up .rise-step { transition: transform 1s cubic-bezier(.2, .8, .2, 1); }
+.rise.is-up .r2 { transition-delay: .15s; } .rise.is-up .r3 { transition-delay: .3s; } .rise.is-up .r4 { transition-delay: .45s; }
+@media (prefers-reduced-motion: reduce) { .rise-step { animation: none; } .js .rise:not(.is-up) .rise-step { transform: none; } }
+.block.dark .rise-step h3 { color: inherit; }
