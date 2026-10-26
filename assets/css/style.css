@@ -397,3 +397,6 @@ img.init-art { width: auto; height: 96px; margin-bottom: 20px; }
 .entry-link { font-weight: 600; color: var(--navy); border-bottom: 1.5px solid var(--navy); padding-bottom: 2px; }
 .entry:hover .entry-link { border-bottom-width: 2.5px; }
 @media (max-width: 900px) { .entries { grid-template-columns: 1fr; } }
+
+img.entries-art { width: 100%; height: auto; margin-top: 48px; }
+.entries-art + .entries { margin-top: 32px; }
